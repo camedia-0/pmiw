@@ -1,16 +1,16 @@
-let inicio_1, inicio_2;
+let inicio_1, inicio_2, inicio_3, inicio_4;
 
-let sola_nave_1, sola_nave_2, sola_nave_3;
-let rangers_1, rangers_2, rangers_3;
+let sola_1, sola_2;
+let rangers_1, rangers_2;
 
-let sola_pelea_1, sola_pelea_2, sola_pelea_3, sola_pelea_4;
-let sola_pueblo_1, sola_pueblo_2, sola_pueblo_3, sola_pueblo_4;
-let rangers_pueblo_1, rangers_pueblo_2, rangers_pueblo_3, rangers_pueblo_4;
+let sola_companera_1, sola_companera_2, sola_companera_3;
+let sola_pueblo_1, sola_pueblo_2;
+let rangers_pueblo_1, rangers_pueblo_2, rangers_pueblo_3;
 
-let final_rangers_0, final_rangers_1, final_rangers_2, final_rangers_3, final_rangers_4, final_rangers_5;
-let final_sola_1, final_sola_2, final_sola_3, final_sola_4;
-let final_lider_pueblo_SM_1, final_lider_pueblo_SM_2, final_lider_pueblo_SM_3, final_lider_pueblo_SM_4, final_lider_pueblo_SM_5;
-let final_lider_pueblo_CM_1, final_lider_pueblo_CM_2, final_lider_pueblo_CM_3, final_lider_pueblo_CM_4, final_lider_pueblo_CM_5;
+let final_rangers_1, final_rangers_2, final_rangers_3, final_rangers_4;
+let final_sola_companera_1, final_sola_companera_2, final_sola_companera_3, final_sola_companera_4, final_sola_companera_5;
+let final_lider_pueblo_SM_1, final_lider_pueblo_SM_2, final_lider_pueblo_SM_3;
+let final_lider_pueblo_CM_1, final_lider_pueblo_CM_2, final_lider_pueblo_CM_3, final_lider_pueblo_CM_4;
 let final_rangers_pueblo_SM_1, final_rangers_pueblo_SM_2, final_rangers_pueblo_SM_3, final_rangers_pueblo_SM_4;
 let final_rangers_pueblo_CM_1, final_rangers_pueblo_CM_2, final_rangers_pueblo_CM_3, final_rangers_pueblo_CM_4, final_rangers_pueblo_CM_5;
 
@@ -30,9 +30,10 @@ function draw() {
 }
 
 function mouseClicked() {
-  if(reiniciar())return;  
-  pantallas_inicio();
-  pantallas_primera_decision();
-  pantallas_segunda_decision();
-  pantallas_tercera_decision();
+  if (reiniciar()) return;
+  
+  if (pantallas_inicio()) return;
+  if (pantallas_primera_decision()) return;
+  if (pantallas_segunda_decision()) return;
+  if (pantallas_tercera_decision()) return;
 }
