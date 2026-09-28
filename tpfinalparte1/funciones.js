@@ -21,12 +21,12 @@ function decision(pantalla_actual, decision_A, decision_D) {
 }
 
 function reiniciar(){
-  if (estado === "final_sola_4" ||
-      estado === "final_lider_pueblo_SM_5" ||
-      estado === "final_lider_pueblo_CM_5" ||
+  if (estado === "final_sola_companera_5" ||
+      estado === "final_lider_pueblo_SM_3" ||
+      estado === "final_lider_pueblo_CM_4" ||
       estado === "final_rangers_pueblo_CM_5" ||
       estado === "final_rangers_pueblo_SM_4" ||
-      estado === "final_rangers_5") {
+      estado === "final_rangers_4") {
     if (mouseX > 300 && mouseX < 500 && mouseY > 355 && mouseY < 405) {
       estado = "inicio_1";
       return true;
