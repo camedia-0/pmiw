@@ -1,6 +1,37 @@
+function animar(frames, frames_cant, velocidad){
+  let frame = floor(frame_animacion / velocidad) % frames_cant;
+  image(frames[frame], 0, 0, width, height);
+  frame_animacion++;
+  return frame;
+}
+
+function texto_creditos(){
+ push();
+  textFont(tipografia);
+  fill(255);
+  noStroke();
+  textSize(12);
+  
+  textAlign(LEFT);
+  text("PMIW", 20, 395);
+  text("Docente:", 20, 407)
+  text("Leonardo Garay", 20, 422);
+  
+  textAlign(RIGHT);
+  text("Creado por:", 780, 395);
+  text("Nahuel Villarubia Piuca", 780, 410);
+  text("Camila Iara Salcedo", 780, 422);
+ pop();
+}
+
 function pantalla_inicio_play(pantalla_actual, pantalla_siguiente) {
   if (estado === pantalla_actual) {
     if (mouseX > 310 && mouseX < 490 && mouseY > 355 && mouseY < 405) {
+      if (!musica_fondo.isPlaying()) {
+        musica_fondo.setVolume(0.3);
+        musica_fondo.loop();
+      }
+
       estado = pantalla_siguiente;
       return true;
     }
@@ -18,10 +49,11 @@ function boton_inicio_play(){
     strokeWeight(2);
     rect(400, 380, 180, 50, 10);
     
+    textFont(tipografia);
     fill(255);
     noStroke();
     textSize(20);
-    text("JUGAR", 400, 380);
+    text("EMPEZAR", 400, 380);
   pop();
 }
 
@@ -35,26 +67,23 @@ function pantalla(pantalla_actual, pantalla_siguiente) {
   return false;
 }
 
-function dibujar_texto(texto, y_pos, tiene_boton) {
+function dibujar_texto(texto, y_pos, tiene_boton, tam = 11) {
   push();
     rectMode(CORNER);
     fill(0, 190);
+    stroke(120);
     rect(40, y_pos, 720, 80, 10);
- 
+    
+    textFont(tipografia);
     fill(255);
-    noStroke();
-    textSize(15);
+    textSize(tam);
     textAlign(LEFT, TOP);
 
     if (tiene_boton === true) {
       text(texto, 55, y_pos + 15, 620, 55); 
-      fill(255);
-      rect(680, y_pos + 15, 60, 50, 6);
-
-      fill(0);
-      textSize(22);
-      textAlign(CENTER, CENTER);
-      text("→", 710, y_pos + 38);
+      fill(160);
+      rect(685, y_pos + 15, 50, 50);
+      image(flecha, 695, y_pos+25, 30, 30);
     } else {
       text(texto, 55, y_pos + 15, 690, 55);
     }
@@ -66,16 +95,17 @@ function decision_botones(texto_a, texto_b) {
     rectMode(CENTER);
     textAlign(CENTER, CENTER);
     textSize(15);
-  
+    
+    textFont(tipografia);
     fill(0, 200);
-    stroke(255);
+    stroke(120);
     rect(250, 410, 200, 32, 8);
     fill(255);
     noStroke();
     text(texto_a, 250, 410);
   
     fill(0, 200);
-    stroke(255);
+    stroke(120);
     rect(550, 410, 200, 32, 8);
     fill(255);
     noStroke();
@@ -88,13 +118,14 @@ function reiniciar_boton() {
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(15);
-
+  
+  textFont(tipografia);
   fill(0, 200);
   stroke(255);
   rect(400, 410, 200, 32, 8);
   fill(255);
   noStroke();
-  text("reiniciar", 400, 410);
+  text("REINICIAR", 400, 410);
   pop();
 }
 
