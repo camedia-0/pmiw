@@ -1,3 +1,13 @@
+// Agregar el enclace del video acá
+
+let musica_fondo;
+let portada = [];
+let portada_cant = 40;
+let frame_animacion = 0;
+
+let tipografia;
+let flecha;
+
 let inicio_0, inicio_1, inicio_2, inicio_3, inicio_4;
 
 let sola_1, sola_2;
