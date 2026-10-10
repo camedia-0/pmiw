@@ -1,4 +1,17 @@
 function precargar(){
+  // Música
+  musica_fondo = loadSound("data/musica_fondo.mp3");
+  
+  // Animación de la portada
+  for (let a = 0; a < portada_cant; a++) {
+    let imagen = loadImage("data/portada/portada_" + a + ".jpg");
+    portada.push(imagen);
+  }
+  
+  // Tipografía y flecha
+  tipografia = loadFont("data/OcrAExtended.ttf");
+  flecha = loadImage("data/flecha.png");
+  
   // Inicio 
   inicio_0 = loadImage("data/inicio_0.jpg");
   inicio_1 = loadImage("data/inicio_1.jpg");
