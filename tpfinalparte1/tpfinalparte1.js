@@ -1,4 +1,4 @@
-// Agregar el enclace del video acá
+// Agregar el enlace del video acá
 
 let musica_fondo;
 let portada = [];
