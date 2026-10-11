@@ -13,7 +13,6 @@ function precargar(){
   flecha = loadImage("data/flecha.png");
   
   // Inicio 
-  inicio_0 = loadImage("data/inicio_0.jpg");
   inicio_1 = loadImage("data/inicio_1.jpg");
   inicio_2 = loadImage("data/inicio_2.jpg");
   inicio_3 = loadImage("data/inicio_3.jpg");
