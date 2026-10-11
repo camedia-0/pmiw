@@ -1,4 +1,4 @@
-// Agregar el enlace del video acá
+// https://youtu.be/mRUiwSXtJoA?si=-u0yqKsUXhYLnNQk
 
 let musica_fondo;
 let portada = [];
@@ -8,7 +8,7 @@ let frame_animacion = 0;
 let tipografia;
 let flecha;
 
-let inicio_0, inicio_1, inicio_2, inicio_3, inicio_4;
+let inicio_1, inicio_2, inicio_3, inicio_4;
 
 let sola_1, sola_2;
 let rangers_1, rangers_2;
