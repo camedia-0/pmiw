@@ -77,14 +77,12 @@ class Flecha{
       }
 
       if (colisionoConEscudo) {
-        print("¡Bloqueado por el escudo! La flecha desaparece.");
         this.reiniciarFlecha();
       } 
       else {
         if (this.posX === 400 && this.posY === 200
         || (this.direccion === "ARRIBA" && this.posY <= 200)
         || (this.direccion === "ABAJO" && this.posY >= 200)) {
-          print("¡Impacto en la líder!");
           personajeActual.dañoRecibido();
           this.reiniciarFlecha();
         }
