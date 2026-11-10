@@ -44,10 +44,4 @@ class escudo{
     this.tamY = 80;
     }
   }
-  
-  dañoRecibido(){
-  }
-  
-  morir(){
-  }
 }
