@@ -21,10 +21,4 @@ class personaje{
       // Acá después manejamos la transición al camino B
     }
   }
-  
-  morir(){
-  }
-  
-  reparar(){
-  }
 }
